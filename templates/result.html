@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Question Answering System</title>
+    <link rel="stylesheet" href="https://cdn.discordapp.com/attachments/695222842090717570/836728394201579796/discord-style.css">
+    <style>
+        body {
+            background-color: #36393F;
+            color: #DCDDDE;
+            font-family: Whitney,Helvetica Neue,Helvetica,Arial,sans-serif;
+            font-size: 16px;
+            line-height: 24px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header-image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 50px;
+        }
+        .header-image img {
+            max-width: 80%;
+            height: auto;
+        }
+
+        h1 {
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+        p {
+            font-size: 20px;
+            margin-top: 0;
+        }
+        .answer {
+            margin-top: 32px;
+            max-width: 800px;
+        }
+        .answer h2 {
+            font-size: 24px;
+            margin-bottom: 16px;
+        }
+        .answer p {
+            font-size: 20px;
+            margin-top: 0;
+        }
+
+        footer {
+            background-color: #262626;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            font-size: 14px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .footer a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            color: #007bff;
+        }
+
+        .footer p {
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .social-icons a {
+            margin: 0 10px;
+        }
+
+        .social-icons img {
+            max-width: 30px;
+            height: auto;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Question Answering System</h1>
+    <p>Question: {{ question }}</p>
+    <div class="answer">
+        {% if answer %}
+        <h2>Answer:</h2>
+        <p>{{ answer }}</p>
+        {% else %}
+        <p>No answer found.</p>
+        {% endif %}
+    </div>
+
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h4>Anoop Johny 🤖</h4>
+                </div>
+            <div class="col-md-4 text-center">
+                <h4>Follow Me</h4>
+                <ul class="social-icons">
+                    <a href="https://www.linkedin.com/in/anoop-johny-30a746181/"><img src="{{ url_for('static', filename='res/linkedin.png') }}" alt="LinkedIn"></a>
+                    <a href="https://github.com/flyfir248"><img src="{{ url_for('static', filename='res/github.png') }}" alt="GitHub"></a>
+                    <a href="https://pythonpythonme.netlify.app/index.html"><img src="{{ url_for('static', filename='res/web.png') }}" alt="Website"></a>
+                    <a href="https://medium.com/@anoopjohny2000"><img src="{{ url_for('static', filename='res/medium.png') }}" alt="Medium"></a>
+                </ul>
+            </div>
+        </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <p class="text-muted">© 2023-2024 PythonPythonME.</p>
+                    <p>All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
