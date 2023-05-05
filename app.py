@@ -2,6 +2,7 @@ from flask import Flask, request, render_template
 from transformers import AutoTokenizer, AutoModelForQuestionAnswering
 
 app = Flask(__name__)
+app.config['TEMPLATES_AUTO_RELOAD'] = True
 
 # Step 1: Choose a pre-trained model architecture
 model_name = "bert-large-uncased-whole-word-masking-finetuned-squad"
